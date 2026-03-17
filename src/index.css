@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Manrope", ui-sans-serif, system-ui;
+}
+
+:root,
+:root[data-theme='dark'],
+.theme-dark {
+  color-scheme: dark;
+  --color-ink: 255 255 255;
+  --color-panel: 22 33 51;
+  --color-panel-soft: 27 41 64;
+  --color-accent: 123 212 200;
+  --color-accent-warm: 239 183 116;
+  --color-success: 144 215 167;
+  --color-danger: 239 138 127;
+  --color-muted: 255 255 255;
+  --color-empty-cell: 15 23 42;
+  --color-empty-cell-hover: 30 41 59;
+  --color-wall-cell: 226 232 240;
+  --color-frontier: 123 212 200;
+  --color-visited: 125 211 252;
+  --color-bar-default-end: 220 252 231;
+  --color-bar-sorted-end: 209 250 229;
+  --color-bar-pivot-end: 253 230 138;
+  --color-bar-active-end: 254 205 211;
+  --shadow-glow: 0 24px 60px rgba(6, 12, 24, 0.34);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(123, 212, 200, 0.15), transparent 28%),
+    radial-gradient(circle at 88% 8%, rgba(239, 183, 116, 0.12), transparent 24%),
+    linear-gradient(180deg, #101827 0%, #0c1422 42%, #0a101a 100%);
+  color: rgb(var(--color-ink));
+}
+
+:root[data-theme='light'],
+.theme-light {
+  color-scheme: light;
+  --color-ink: 0 0 0;
+  --color-panel: 248 244 236;
+  --color-panel-soft: 255 253 248;
+  --color-accent: 91 168 155;
+  --color-accent-warm: 215 154 75;
+  --color-success: 127 191 144;
+  --color-danger: 216 121 114;
+  --color-muted: 0 0 0;
+  --color-empty-cell: 231 229 228;
+  --color-empty-cell-hover: 214 211 209;
+  --color-wall-cell: 71 85 105;
+  --color-frontier: 91 168 155;
+  --color-visited: 96 165 250;
+  --color-bar-default-end: 191 219 254;
+  --color-bar-sorted-end: 187 247 208;
+  --color-bar-pivot-end: 253 230 138;
+  --color-bar-active-end: 254 202 202;
+  --shadow-glow: 0 22px 55px rgba(80, 93, 120, 0.16);
+  background:
+    radial-gradient(circle at 14% 10%, rgba(91, 168, 155, 0.14), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(215, 154, 75, 0.14), transparent 24%),
+    linear-gradient(180deg, #fffdf8 0%, #f6efe2 48%, #f2eadc 100%);
+  color: rgb(var(--color-ink));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background: inherit;
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-muted) / 0.32);
+  border-radius: 999px;
+}
